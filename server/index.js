@@ -6,7 +6,7 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
-const posts = require('./routes/api/posts.js');
+const posts = require('./routes/api/posts');
 app.use('/api/posts', posts);
 
 // Handle production
