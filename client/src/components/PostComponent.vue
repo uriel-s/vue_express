@@ -3,7 +3,12 @@
     <h1>Latest Posts</h1>
     <div class="create-post">
       <label for="create-post">Say something ... </label>
-      <input type="text" id="create-post" v-model="text" placeholder="Create a post">
+      <input type="text" id="create-post" v-model="text1" placeholder="Create a post!">
+      <button v-on:click="createPost">Post!</button>
+    </div>
+    <div class="select-email">
+      <label >דואר אלקטרוני ... </label>
+      <input type="text" id="select-email" v-model="text" placeholder="הכנס כתובת">
       <button v-on:click="createPost">Post!</button>
     </div>
     <hr>
@@ -18,7 +23,11 @@
       >
         {{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}
         <p class="text">{{ post.text }}</p>
+            <button v-on:click="deletePost(post._id)">מחק</button>
       </div>
+    </div>
+    <div class="move-to-login-comp">
+      <button v-on:click="SwitchPage">sign In</button>
     </div>
   </div>
 </template>
@@ -31,8 +40,10 @@ export default {
     return {
       posts: [],
       error: '',
-      text: ''
-    }
+      text1: '',
+      text2: ''
+
+}
   },
   async created() {
     try {
@@ -42,6 +53,12 @@ export default {
     }
   },
   methods: {
+
+
+  SwitchPage(){
+    alert: 'The requested page has not yet been created'
+  },
+
     async createPost() {
       await PostService.insertPost(this.text)
       this.posts = await PostService.getPosts()
@@ -68,7 +85,7 @@ p.error {
 }
 div.post {
   position: relative;
-  border: 1px solid #5bd658;
+  border: 1px solid #061106;
   background-color: #bcffb8;
   padding: 10px 10px 30px 10px;
   margin-bottom: 15px;
