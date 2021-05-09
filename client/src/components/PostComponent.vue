@@ -2,13 +2,8 @@
   <div class="container">
     <h1>Latest Posts</h1>
     <div class="create-post">
-      <label for="create-post">Say something ... </label>
-      <input type="text" id="create-post" v-model="text1" placeholder="Create a post!">
-      <button v-on:click="createPost">Post!</button>
-    </div>
-    <div class="select-email">
-      <label >דואר אלקטרוני ... </label>
-      <input type="text" id="select-email" v-model="text" placeholder="הכנס כתובת">
+      <label for="create-post">post something ... </label>
+      <input type="text" id="create-post" v-model="text" placeholder="Create a post!">
       <button v-on:click="createPost">Post!</button>
     </div>
     <hr>
@@ -26,9 +21,6 @@
             <button v-on:click="deletePost(post._id)">מחק</button>
       </div>
     </div>
-    <div class="move-to-login-comp">
-      <button v-on:click="SwitchPage">sign In</button>
-    </div>
   </div>
 </template>
 
@@ -40,9 +32,7 @@ export default {
     return {
       posts: [],
       error: '',
-      text1: '',
-      text2: ''
-
+      text: '',
 }
   },
   async created() {
@@ -53,11 +43,6 @@ export default {
     }
   },
   methods: {
-
-
-  SwitchPage(){
-    alert: 'The requested page has not yet been created'
-  },
 
     async createPost() {
       await PostService.insertPost(this.text)
