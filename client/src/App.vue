@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/nature.png"  width="130" >
-    <PostComponent />
-    <Login />
+  <img alt="Vue logo" src="./assets/nature.png"  width="130" >
+  <PostComponent />
+  <router-view></router-view>
+  <hr>
+<router-link to ="/Login">Loging  </router-link>
+  <router-link to ="/SignUp" >SignUp  </router-link>
   </div>
 </template>
 

@@ -12,7 +12,6 @@
     <i> </i>
     <p v-if="error">{{ eror }}</p>
  <button v-on:click="Enter()">כניסה</button>
-  <button v-on:click="SwitchPage()">ליצירת חשבון</button>
 
   </div>
 </template>
