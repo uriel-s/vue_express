@@ -17,12 +17,9 @@ export default {
   methods: {
     setupFirebase() {
       firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-          // User is signed in.
+        if (user) { // User is signed in.
           this.loggedIn = true;
-        } else {
-          // No user is signed in.
-          this.loggedIn = false;
+        } else {  this.loggedIn = false;
         }
       });
     },
