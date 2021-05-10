@@ -1,8 +1,8 @@
 <template>
   <div> 
   <hr>
-  <router-link to ="/login">Login  </router-link>
-  <router-link to ="/SignUp" >SignUp  </router-link>  
+  <router-link to ="/login">Login</router-link> |
+  <router-link to ="/SignUp" >SignUp</router-link>  
    <router-view/>
       
 </div>
@@ -16,7 +16,7 @@ import SignUp from '/src/components/SignUp.vue'
 export default {
   name: 'Enter',
   components: {
-    PostComponent, Login ,SignUp,
+     Login ,SignUp,
 
   }
 }

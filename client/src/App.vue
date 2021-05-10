@@ -1,24 +1,23 @@
 <template>
   <div id="app">
-  <img alt="Vue logo" src="./assets/nature.png"  width="130" >
-  <div>
-  <router-link to ="/">  __Posts__  </router-link>
-  <router-link to ="/Enter">  ___Enter___    </router-link>
-   <router-view/>
-  </div>
-
+    <Top_Header/>
+    <img alt="Vue logo" src="./assets/nature.png"  width="130" >
+    <div>
+      <router-link to ="/">  PostComponent  </router-link> |
+      <router-link to ="/Enter">  Enter  " </router-link>
+      <router-view/>
+   </div>
   </div>
 </template>
 
 <script>
-import PostComponent from './components/PostComponent.vue'
-import Enter from './components/Enter.vue'
+
+import Top_Header from './components/Top_Header.vue'
 
 export default {
   name: 'app',
   components: {
-    PostComponent, Enter
-
+     Top_Header
   }
   , methods: {
     onclick(){
