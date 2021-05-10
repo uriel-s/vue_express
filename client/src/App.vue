@@ -1,25 +1,30 @@
 <template>
   <div id="app">
   <img alt="Vue logo" src="./assets/nature.png"  width="130" >
-  <PostComponent />
-  <router-view></router-view>
-  <hr>
-<router-link to ="/Login">Loging  </router-link>
-  <router-link to ="/SignUp" >SignUp  </router-link>
+  <div>
+  <router-link to ="/">  __Posts__  </router-link>
+  <router-link to ="/Enter">  ___Enter___    </router-link>
+   <router-view/>
+  </div>
+
   </div>
 </template>
 
 <script>
 import PostComponent from './components/PostComponent.vue'
-import Login from './components/Login.vue'
-import SignUp from './components/SignUp.vue'
+import Enter from './components/Enter.vue'
 
 export default {
   name: 'app',
   components: {
-    PostComponent, Login ,SignUp
+    PostComponent, Enter
 
   }
+  , methods: {
+    onclick(){
+this.$roter.push('/Enter')
+    }
+  },
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <h1>Login</h1>
+    <h1>SignUp</h1>
     <div >
       <label >דואר אלקטרוני    </label>
       <input type="text" id="select-email" v-model="email" placeholder="הכנס כתובת">

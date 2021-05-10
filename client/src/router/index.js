@@ -4,6 +4,7 @@ import PostComponent from '../components/PostComponent'
 
 import Login from '../components/Login'
 import SignUp from '../components/SignUp.vue'
+import Enter from '../components/Enter.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/signup',
       name: 'SignUp',
       component: SignUp
-    }
+    },
+    {
+      path: '/Enter',
+      name: 'Enter',
+      component: Enter
+    },
   ]
 })
