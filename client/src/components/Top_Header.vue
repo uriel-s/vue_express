@@ -1,9 +1,8 @@
 <template>
   <div>
-    Logged in
     <div v-if="loggedIn">מחובר</div>
-    <div v-else>התחבר למערכת</div>
-    <button class="but" @click="signOut">Sign out</button>
+    <div v-else> לא מחובר</div>
+    <button class="but" v-if="loggedIn"  @click="signOut">Sign out</button>
   </div>
 </template>
 

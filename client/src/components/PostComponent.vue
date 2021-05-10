@@ -72,11 +72,11 @@ div.post {
   position: relative;
   border: 1px solid #061106;
   background-color: #bcffb8;
-  padding: 10px 10px 30px 10px;
-  margin-bottom: 15px;
+  padding: 10px 10px 20px 10px;
+  margin-bottom: 5px;
 }
 div.created-at {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 5px 15 px 5px 15px;
